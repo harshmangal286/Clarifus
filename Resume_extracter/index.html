@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarifuse — Career decision intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/extraction.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+    <nav>
+      <a class="brand" href="#"><span class="brand-mark">c</span>clarifuse</a>
+      <div class="nav-actions"><a href="#how">How it works</a><a href="#snapshot">About</a><button class="small-cta" data-start>Get clarity <span>↗</span></button></div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="eyebrow"><span></span> Career decision intelligence</div>
+        <h1>Stop guessing your<br><em>next career move.</em></h1>
+        <p class="hero-copy">Clarifuse understands your current position, identifies what's holding you back, and tells you exactly what deserves your attention next.</p>
+        <div class="hero-actions"><button class="primary" data-start>Find your next move <span>→</span></button><button class="text-button" data-scroll="#how">See how it works <i>↓</i></button></div>
+        <div class="trust"><div class="avatars"><b>V</b><b>J</b><b>N</b><b>+</b></div><span>Built for students who want direction, not more noise.</span></div>
+      </section>
+
+      <section class="flow-section" id="how">
+        <div class="section-label">A calmer way to move forward</div>
+        <div class="flow"><div class="flow-step"><span class="flow-icon">↟</span><strong>Your resume</strong><small>What you've done</small></div><div class="flow-line"></div><div class="flow-step"><span class="flow-icon">◎</span><strong>Your context</strong><small>Where you want to go</small></div><div class="flow-line"></div><div class="flow-step accent"><span class="flow-icon">✦</span><strong>Your clarity</strong><small>What matters now</small></div></div>
+      </section>
+
+      <section class="onboarding hidden" id="onboarding">
+        <div class="progress"><span class="active"></span><span></span><span></span><span></span></div>
+        <button class="back" id="backBtn">← Back</button>
+        <article class="question step active" data-step="1"><div id="uploadView"><div class="step-kicker">01 — Get started</div><h2>Bring us up to speed.</h2><p>A resume gives us useful signals. You can also start with a conversation.</p><label class="upload-zone" id="uploadZone"><input type="file" accept=".pdf,.doc,.docx" id="fileInput"><span class="upload-orb">↑</span><strong>Drop your resume here</strong><small>PDF or DOCX · up to 10 MB</small><em>or choose a file</em></label><p class="upload-status" id="uploadStatus" aria-live="polite"></p><button class="continue primary" id="skipUpload">Continue without a resume <span>→</span></button></div><div class="extraction-view hidden" id="extractionView"><div class="step-kicker">Resume understood</div><div class="extraction-title"><div><h2>Here’s what we found.</h2><p id="extractionSummary">Review these signals before we use them to shape your path.</p></div><span class="verified">✓ Extracted</span></div><div class="extraction-grid" id="extractionGrid"></div><button class="continue primary" id="confirmExtraction">These look right <span>→</span></button><button class="text-button" id="replaceResume">Use a different resume</button></div></article>
+        <article class="question step" data-step="2"><div class="step-kicker">02 — Your direction</div><h2>What are you moving toward?</h2><p>There’s no wrong answer. Pick the direction that feels most true right now.</p><div class="choice-grid" id="goals"><button>AI / ML Internship</button><button>Software Developer</button><button>Cybersecurity</button><button>Higher Studies</button><button>Still exploring <span>↗</span></button></div><button class="continue primary" disabled>Continue <span>→</span></button></article>
+        <article class="question step" data-step="3"><div class="step-kicker">03 — A little context</div><h2>What feels most unclear?</h2><p>This helps us find the decision hiding underneath the noise.</p><div class="radio-list" id="confusion"><button><i></i>I don’t know where to start.</button><button><i></i>Too many options in front of me.</button><button><i></i>I don’t know which skill to prioritize.</button><button><i></i>I need an internship, but don’t feel ready.</button></div><div class="confidence"><div><b>How clear does your path feel?</b><span id="confidenceText">Somewhere in the middle</span></div><input type="range" min="0" max="4" value="2" id="confidenceRange"><div class="range-labels"><span>Very confused</span><span>Very clear</span></div></div><button class="continue primary" disabled>See my snapshot <span>→</span></button></article>
+        <article class="question step processing" data-step="4"><div class="step-kicker">Making sense of the signals</div><h2>Building your career snapshot.</h2><p>Not scoring your resume. Finding the decision with the most leverage.</p><div class="thinking" id="thinking"><div><span>✓</span> Reading your experience</div><div><span>○</span> Understanding your direction</div><div><span>○</span> Finding missing signals</div><div><span>○</span> Prioritizing the next step</div></div></article>
+      </section>
+
+      <section class="snapshot hidden" id="snapshot">
+        <aside class="side-nav"><a class="brand" href="#"><span class="brand-mark">c</span>clarifuse</a><div class="side-links"><a class="selected">Overview</a><a>Career snapshot</a><a>Project lab</a><a>Progress</a><a>AI mentor <i>✦</i></a></div><div class="profile"><span>AK</span><div><b>Arjun Kumar</b><small>Computer Science</small></div><i>⌄</i></div></aside>
+        <div class="dashboard">
+          <header><div><span class="welcome">Tuesday, 21 July</span><h2>Good morning, Arjun.</h2></div><button class="ask">Ask your mentor <span>✦</span></button></header>
+          <section class="focus-intro"><div><span class="pill">YOUR NEXT MOVE</span><h3>Build one practical<br>AI project.</h3><p>Your profile has the foundations. Now it needs proof that you can apply them.</p><button class="inline-btn">See the reasoning <span>→</span></button></div><div class="focus-art"><div class="orbit"></div><div class="focus-number">01<small>focus</small></div><div class="spark s1">✦</div><div class="spark s2">✦</div></div><div class="effort"><span>Expected impact</span><b>High <i>↗</i></b><span>Estimated effort</span><b>25 hours</b></div></section>
+          <div class="dash-grid"><section class="signal-card"><div class="card-head"><div><span class="pill muted">CAREER SIGNALS</span><h3>Where you stand</h3></div><div class="health"><b>78</b><small>health</small></div></div><div class="signal-row"><span>Strong foundations</span><div class="signal-dots"><i></i><i></i><i></i><i></i><i></i></div><b>Strong</b></div><div class="signal-row"><span>Applied proof</span><div class="signal-dots low"><i></i><i></i><i></i><i></i><i></i></div><b>Growing</b></div><div class="signal-row"><span>Career clarity</span><div class="signal-dots med"><i></i><i></i><i></i><i></i><i></i></div><b>Good</b></div></section><section class="blocker-card"><span class="pill muted">THE BLOCKER</span><h3>You don't lack potential.<br><em>You lack a focal point.</em></h3><p>More courses or certificates won’t help as much as one thing you can point to with confidence.</p><button class="inline-btn">Why this matters <span>→</span></button></section></div>
+          <section class="timeline"><div class="timeline-head"><div><span class="pill muted">YOUR 30-DAY PATH</span><h3>Small steps. Clear evidence.</h3></div><button class="text-button">View full plan <i>→</i></button></div><div class="timeline-steps"><div class="time-item now"><small>Today</small><b>Choose a problem</b><span>Find a dataset worth exploring</span></div><div class="time-item"><small>Week 1</small><b>Build the foundation</b><span>Clean data & map your approach</span></div><div class="time-item"><small>Week 2</small><b>Train a model</b><span>Turn your idea into proof</span></div><div class="time-item"><small>Week 3–4</small><b>Share your work</b><span>Deploy, document, publish</span></div></div></section>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
