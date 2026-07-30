@@ -1,0 +1,11 @@
+# API keys and environment files
+.env
+backend/.env
+
+# Python caching and compiled files
+__pycache__/
+*.pyc
+
+# Node/Vite build files and dependencies
+node_modules/
+dist/
