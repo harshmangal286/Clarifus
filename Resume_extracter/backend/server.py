@@ -3,7 +3,7 @@
 Run from the project root with: python -m uvicorn backend.server:app --reload
 """
 from __future__ import annotations
-
+from app.database import students_collection
 import io
 import json
 import os
@@ -461,7 +461,15 @@ async def extract_resume(file: UploadFile = File(...)):
     
     # Calculate word count for reference
     word_count = len(re.sub(r"\s+", " ", text).strip().split())
-    
+
+    # Save extracted resume data to MongoDB
+    student_data = extraction.copy()
+
+    student_data["file_name"] = file.filename
+    student_data["word_count"] = word_count
+
+    students_collection.insert_one(student_data)
+
     return {
         "file_name": file.filename,
         "word_count": word_count,
